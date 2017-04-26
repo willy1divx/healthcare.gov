@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Household builder</title>
+        <style>
+            .debug {
+                font-family: monospace;
+                border: 1px solid black;
+                padding: 10px;
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Household builder</h1>
+        <div class="builder">
+            <ol class="household"></ol>
+            <form id="name-form">
+                <div>
+                    <label>Age
+                        <input type="number" name="age">
+                    </label>
+                </div>
+                <div>
+                    <label>Relationship
+                        <select name="rel">
+                            <option value="">---</option>
+                            <option value="self">Self</option>
+                            <option value="spouse">Spouse</option>
+                            <option value="child">Child</option>
+                            <option value="parent">Parent</option>
+                            <option value="grandparent">Grandparent</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </label>
+                </div>
+                <div>
+                    <label>Smoker?
+                        <input type="radio" name="smoker" value="smoker">
+                        Nonsmoker
+                        <input type="radio" name="smoker" value="nonsmoker">
+                    </label>
+                </div>
+                <div>
+                    <button class="add" onclick="addFamily()">add</button>
+                    
+                    <button class="remove" onclick="removeFamily()">remove</button>
+                </div>
+                <div>
+                    <button onclick="toServer()">submit</button>
+                </div>
+             </form>
+                
+             <pre class="ok">families stored in server :</pre>
+        
+         </div>
+        <script type="text/javascript" src="./index.js"></script>
+    </body>
+</html>
