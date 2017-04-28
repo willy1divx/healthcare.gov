@@ -73,15 +73,19 @@
 		var form = document.getElementById("name-form");
 		form.onsubmit = function(e){
 		e.preventDefault();
-		server.push(family);
-		console.log(server);
-		var familyMember = JSON.stringify(server);
-		console.log(familyMember);
-		var html = family;
-		var show = document.getElementsByClassName("ok");
-		show[0].innerHTML += familyMember;
-		family = [];
-		server = ["to server:"];
+		var age = document.getElementsByName("age")[0].value;
+	  	var rel = document.getElementsByName("rel")[0].value;
+	  	var smoker = (form.smoker.value);
+		 if ( rel != "" && age > 0 && age != ""){
+			server.push(family);
+			console.log(server);
+			var familyMember = JSON.stringify(server);
+			console.log(familyMember);
+			var html = family;
+			var show = document.getElementsByClassName("debug");
+			show[0].innerHTML = familyMember;
+			family = [];
+		}
 		
 		filtered = [];
 		var myNode = document.getElementsByClassName("household");
@@ -92,6 +96,35 @@
 		reduceNumber = 0;
 		return server;
 		}
-	}
+		}
+
+		var retrieve = function (){
+			var form = document.getElementById("name-form");
+			 form.onsubmit = function(e){
+			 	e.preventDefault();
+			 	number = 0;
+			 	family = server[server.length - 1];
+			 	server.pop();
+			 	console.log(family);
+			 	for (var i = 0 ; i< family.length; i++){
+			 	var node = document.createElement("LI");
+				    node.id = number;
+				    var familyMember = JSON.stringify(family[i]);            
+					var textnode = document.createTextNode(familyMember);        
+					node.appendChild(textnode);                             
+					var list = document.getElementsByClassName("household");
+					list[0].appendChild(node);  
+					number++ 
+				}
+				console.log(family[0]);
+				console.log(family[1]);
+				console.log(family[2]);
+			} 
+		}
+
+
+
+
+	
 
 

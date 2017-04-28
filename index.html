@@ -8,7 +8,6 @@
                 font-family: monospace;
                 border: 1px solid black;
                 padding: 10px;
-                display: none;
             }
         </style>
     </head>
@@ -49,10 +48,11 @@
                 </div>
                 <div>
                     <button onclick="toServer()">submit</button>
+                    <button onclick="retrieve()">make changes</button>
                 </div>
              </form>
                 
-             <pre class="ok">families stored in server :</pre>
+             <pre class="debug">families stored in server :</pre>
         
          </div>
         <script type="text/javascript" src="./index.js"></script>
