@@ -8,6 +8,7 @@
                 font-family: monospace;
                 border: 1px solid black;
                 padding: 10px;
+                display: none;
             }
         </style>
     </head>
@@ -15,10 +16,10 @@
         <h1>Household builder</h1>
         <div class="builder">
             <ol class="household"></ol>
-            <form id="name-form">
+            <form>
                 <div>
                     <label>Age
-                        <input type="number" name="age">
+                        <input type="text" name="age">
                     </label>
                 </div>
                 <div>
@@ -36,25 +37,18 @@
                 </div>
                 <div>
                     <label>Smoker?
-                        <input type="radio" name="smoker" value="smoker">
-                        Nonsmoker
-                        <input type="radio" name="smoker" value="nonsmoker">
+                        <input type="checkbox" name="smoker">
                     </label>
                 </div>
                 <div>
-                    <button class="add" onclick="addFamily()">add</button>
-                    
-                    <button class="remove" onclick="removeFamily()">remove</button>
+                    <button class="add">add</button>
                 </div>
                 <div>
-                    <button onclick="toServer()">submit</button>
-                    <button onclick="retrieve()">make changes</button>
+                    <button type="submit">submit</button>
                 </div>
-             </form>
-                
-             <pre class="debug">families stored in server :</pre>
-        
-         </div>
-        <script type="text/javascript" src="./index.js"></script>
+            </form>
+        </div>
+        <pre class="debug"></pre>
+        <script type="text/javascript" src="index.js"></script>
     </body>
 </html>
