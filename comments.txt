@@ -1,0 +1,49 @@
+here are the instructions on how to use and verify the functions of the household builder form.
+
+1. you must enter a numerical age that is greater than 0. if try to enter something other than numbers it 
+  will not let you. if you enter a negative number it will allow you to enter the number but it wont let you 
+  add or submit the person to the household builder list.
+
+2. you must choose a relationship from the drop down list. if you don't choose a relationship it will not 
+  let you add or submit
+
+3. you must choose if the person is a smoker or nonsmoker. although you do not have to select a choice 
+  please choose one. it will help with later retrieval and modifications.
+
+4. clicking <add> button will the person to a newly created list at the top of the form. the person will
+   be displayed in JSON format.
+
+5. you can now go back to age, relationship, and smoking/nonsmoking and <add> another person. keep adding people 
+  until you have all of the family members. make sure you mark  age, relationship, and smoking/nonsmoking for 
+  every family member.
+
+6. you should have a list of all of the family members at the  top of the form. review the list for any mistakes.
+  if there are mistakes or you want to remove a family member you can do so by. entering the person's 
+  age, relationship, and smoking/nonsmoking status the click <remove> button. you should no longer see 
+  the person listed at the top, the person has successfully been removed. if you still see their info on this list 
+  check to make sure that you've exactly matched the age, relationship, and smoker/nonsmoker status the click <remove>
+  button again.
+
+7. if there are more than 1 person to remove, repeat step 6 making sure to click <remove> after each person. 
+
+8. once you are satisfied with the list click on the <submit> button and the family list at the top will disappear
+  you will see a "to server" array below the submit button it should now contain an array of the family
+  members within the "to server" array. 
+
+9. now you are ready to enter a different family by repeating step 5 and 6 or you can retrieve the last 
+  family in the server by clicking on the <retrieve last> button. if you click on the <retrieve last> button 
+  the very group of family members will be listed at the top of the form and you can add or remove family members 
+  and submit again. any changes made will be updated in the server after <submit> is clicked.
+
+10. if there are several families stored in the server and you want to get to someone other than the very 
+  last family. (that's beyond the scope of this project) but it can be done. you will have to click on <retrieve last>
+  once then remove every single family member until there are no one listed on top of the form. then you would click
+  <retrieve last> again (only once) it will then list the next-to-last family group. you can remove all family members
+  and click <retrieve last> again. you can continue doing this until everyone is deleted.
+
+11. if you have a problem where it will not remove person from list. try clicking <submit> to send to the server then
+  <retrieve last> 
+
+12. don't double click <retrieve last> you will list 2 different families at the top of the form and it's not designed to handle 
+  2 families merged. everything will get screwed up. (note: it can be programmed to block double clicks, but that's for 
+  another day.)
